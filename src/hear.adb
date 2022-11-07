@@ -1,8 +1,11 @@
+-- Author: Spencer Hirsch, shirsch2020@my.fit.edu, Ty Gutowski, 
+--    tgutowski@my.fit.edu
+-- Course: CSE 4250, Fall 2022
+-- Project: Project 3, Can you hear me now?
+
 with Ada.Text_IO;
 with Ada.Strings;
 with Ada.Integer_Text_IO;
--- with Ada.Strings.Fixed;
---with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
 
 procedure Hear is
     function Count (Input : String) return Natural is
@@ -29,29 +32,19 @@ procedure Hear is
         return New_String;
     end No_Space;
 
-    --Input : Unbounded_String;
     Input : String(1..80);
     Last : Natural;
     Forever: Boolean := True;
-    -- Cnt : Natural;
     Last_Index : Integer;
     New_String : String(1..Input'Length);
     Spaces : Integer;
 begin
     while Forever loop
-        -- Cnt := Ada.Strings.Fixed.Count;
         Ada.Text_IO.Get_Line(Item => Input, Last => Last);
         Spaces := Count(Input => Input);
         New_String := No_Space(Input => Input, White => Spaces);
-        --for I in Input'Range loop
-        --    X := Input(I);
-        --    if X = ' ';
-
-        --    end if;
-        --end loop;
 
         Last_Index := Input'Length;
-        -- Ada.Integer_Text_IO.Put(Last_Index);
         if Input(Last_Index - 1) = '.' then
             -- Add structure to Graph
             --Ada.Text_IO.Put_Line(Input(Last_Index));
