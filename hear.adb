@@ -1,6 +1,6 @@
--- Author: Spencer Hirsch, shirsch2020@my.fit.edu, Ty Gutowski,
---    tgutowski@my.fit.edu
--- Course: CSE 4250, Fall 2022
+-- Authors: Spencer Hirsch, shirsch2020@my.fit.edu
+--          Tyler Gutowski, tgutowski2020@my.fit.edu
+-- Course:  CSE 4250, Fall 2022
 -- Project: Project 3, Can you hear me now?
 
 with Ada.Text_IO;
@@ -8,7 +8,8 @@ with Ada.Strings;
 with Ada.Integer_Text_IO;
 
 procedure Hear is
-   
+
+    -- ########################################################################
     -- Function to return total number of spaces in a string.
     function Count (Input : String) return Natural is -- Returns integer [1, inf)
         Number_Of_Space : Integer := 0;
@@ -20,7 +21,8 @@ procedure Hear is
         end loop;
         return Number_Of_Space; -- Returns number of spaces
     end Count;
-   
+
+    -- ########################################################################
     -- Function to remove all spaces from a string
     function No_Space (Input : String ; White : Integer) return String is -- Returns a string
         New_String : String(1..Input'Length - White);
@@ -35,6 +37,7 @@ procedure Hear is
         return New_String; -- Returns the string without spaces
     end No_Space;
 
+    -- ########################################################################
     -- Function to remove comments from a string.
     function Fuck_Comments (Input : String ; Comment : Integer) return String is
         New_String : String(1..Input'Length - Comment) := "";
@@ -47,9 +50,9 @@ procedure Hear is
         end loop;
         return New_String;
     end Fuck_Comments;
-                
-      
-      
+
+    -- ########################################################################
+    -- Procedure to process strings
     procedure String_Process(New_String : String) is
     Last_Index : Integer := New_String'Length;
     begin
@@ -66,6 +69,8 @@ procedure Hear is
         end if;
     end String_Process;
 
+    -- ########################################################################
+    -- Loop for user input
     Input : String(1..80);
     Last : Natural;
     Forever: Boolean := True;
