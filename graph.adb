@@ -7,4 +7,3 @@ with Ada.Containers.Doubly_Linked_List;
 
 package Graph is
     package Cell_Towers is new Ada.Containers.Doubly_Linked_Lists;
-    
