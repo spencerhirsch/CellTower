@@ -1,0 +1,61 @@
+V "GNAT Lib v10"
+M P W=b
+P ZX
+
+RN
+RV NO_IO
+RV SPARK_05
+
+U hear%b		hear.adb		0a3caa87 NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.strings%s		a-string.ads		a-string.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+
+D ada.ads		20220628085427 76789da1 ada%s
+D a-except.ads		20220628085427 a7106115 ada.exceptions%s
+D a-inteio.ads		20220628085427 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20220628085427 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20220628085427 119b8fb3 ada.streams%s
+D a-string.ads		20220628085427 90ac6797 ada.strings%s
+D a-tags.ads		20220628085427 491b781d ada.tags%s
+D a-textio.ads		20220628085427 aef4d56d ada.text_io%s
+D a-tiinio.ads		20220628085427 390edddb ada.text_io.integer_io%s
+D a-unccon.ads		20220628085427 0e9b276f ada.unchecked_conversion%s
+D hear.adb		20221107051246 c22f91d9 hear%b
+D interfac.ads		20220628085427 5ab55268 interfaces%s
+D i-cstrea.ads		20220628085427 e53d8b8e interfaces.c_streams%s
+D system.ads		20220628085427 77e65b42 system%s
+D s-crtl.ads		20220628085427 0ebbdb71 system.crtl%s
+D s-exctab.ads		20220628085427 54135002 system.exception_table%s
+D s-ficobl.ads		20220628085427 078245e4 system.file_control_block%s
+D s-parame.ads		20220628085427 48ec542b system.parameters%s
+D s-secsta.ads		20220628085427 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20220628085427 a7318a92 system.soft_links%s
+D s-stache.ads		20220628085427 a37c21ec system.stack_checking%s
+D s-stalib.ads		20220628085427 09bd3940 system.standard_library%s
+D s-stoele.ads		20220628085427 2dc34a04 system.storage_elements%s
+D s-traent.ads		20220628085427 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20220628085427 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20220628085427 1b7d22d2 system.wch_con%s
+G a e
+G c Z b b [hear standard 7 11 none]
+X 1 ada.ads
+16K9*Ada 20e8 11|1r6 2r6 3r6 17r9 24r13 28r13 30r13
+X 3 a-inteio.ads
+18K13*Integer_Text_IO[9|46] 11|3w10
+X 6 a-string.ads
+16K13*Strings 35e16 11|2w10
+X 8 a-textio.ads
+57K13*Text_IO 727e16 11|1w10 17r13 24r17 28r17 30r17
+481U14*Get_Line 11|17s21
+482a7 Item{string} 11|17r30
+483i7 Last{natural} 11|17r45
+508U14*Put_Line 11|24s25 28s25 30s25
+X 11 hear.adb
+7U11*Hear 7b11 33l5 33t9
+9a5 Input{string} 17m38 19r23 21r12 25r15
+10i5 Last{natural} 17m53
+11b5 Forever{boolean} 15r11
+13i5 Last_Index{integer} 19m9 21r18 25r21
+
