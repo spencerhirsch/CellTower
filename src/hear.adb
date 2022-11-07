@@ -11,7 +11,7 @@ procedure Hear is
    
     -- Function to return total number of spaces in a string.
     function Count (Input : String) return Natural is -- Returns integer [1, inf)
-        Number_Of_Space : Integer;
+        Number_Of_Space : Integer := 0;
     begin
         for I in Input'Range loop -- For each character in Input
             if Input(I) = ' ' then -- If its a space, increase word count
@@ -37,13 +37,17 @@ procedure Hear is
 
     -- Function to remove comments from a string.
     function Fuck_Comments (Input : String ; Comment : Integer) return String is
-        New_String : String(1..Input'Length - Comment);
+        New_String : String(1..Input'Length - Comment) := "";
         Index : Integer := 1;
     begin
         for I in Input'Range loop -- For each character in Input
-            
-            if Input(I) == '#'
-              New_String(
+            if Input(I) = '#' then
+                ada.Text_IO.Put_Line("THERE IS COMMENT!");
+            end if;
+        end loop;
+        return New_String;
+    end Fuck_Comments;
+                
       
       
     procedure String_Process(New_String : String) is
@@ -75,4 +79,3 @@ begin
         String_Process(No_Space(Input => Input, White => Spaces));
     end loop;
 end Hear;
-
