@@ -1,4 +1,4 @@
--- Author: Spencer Hirsch, shirsch2020@my.fit.edu, Ty Gutowski, 
+-- Author: Spencer Hirsch, shirsch2020@my.fit.edu, Ty Gutowski,
 --    tgutowski@my.fit.edu
 -- Course: CSE 4250, Fall 2022
 -- Project: Project 3, Can you hear me now?
@@ -8,30 +8,44 @@ with Ada.Strings;
 with Ada.Integer_Text_IO;
 
 procedure Hear is
-    function Count (Input : String) return Natural is
+   
+    -- Function to return total number of spaces in a string.
+    function Count (Input : String) return Natural is -- Returns integer [1, inf)
         Number_Of_Space : Integer;
     begin
-        for I in Input'Range loop
-            if Input(I) = ' ' then
+        for I in Input'Range loop -- For each character in Input
+            if Input(I) = ' ' then -- If its a space, increase word count
                 Number_Of_Space := Number_Of_Space + 1;
             end if;
         end loop;
-        return Number_Of_Space;
+        return Number_Of_Space; -- Returns number of spaces
     end Count;
-
-    function No_Space (Input : String ; White : Integer) return String is
+   
+    -- Function to remove all spaces from a string
+    function No_Space (Input : String ; White : Integer) return String is -- Returns a string
         New_String : String(1..Input'Length - White);
         Index : Integer := 1;
     begin
-        for I in Input'Range loop
-            if Input(I) /= ' ' then
-                New_String(Index) := Input(I);
+        for I in Input'Range loop -- For each character in Input
+            if Input(I) /= ' ' then -- If the character is not a space
+                New_String(Index) := Input(I); -- Add the character to New_String
                 Index := Index + 1;
             end if;
         end loop;
-        return New_String;
+        return New_String; -- Returns the string without spaces
     end No_Space;
 
+    -- Function to remove comments from a string.
+    function Fuck_Comments (Input : String ; Comment : Integer) return String is
+        New_String : String(1..Input'Length - Comment);
+        Index : Integer := 1;
+    begin
+        for I in Input'Range loop -- For each character in Input
+            
+            if Input(I) == '#'
+              New_String(
+      
+      
     procedure String_Process(New_String : String) is
     Last_Index : Integer := New_String'Length;
     begin
@@ -61,5 +75,4 @@ begin
         String_Process(No_Space(Input => Input, White => Spaces));
     end loop;
 end Hear;
-
 
