@@ -32,33 +32,34 @@ procedure Hear is
         return New_String;
     end No_Space;
 
+    procedure String_Process(New_String : String) is
+    Last_Index : Integer := New_String'Length;
+    begin
+        if New_String(Last_Index - 1) = '.' then
+            -- Add structure to Graph
+            --Ada.Text_IO.Put_Line(New_String(Last_Index));
+            Ada.Text_IO.Put_Line(".");
+        elsif New_String(Last_Index - 1) = '?' then
+            -- Call function to check for link
+            --Ada.Text_IO.Put_Line(New_String(Last_Index));
+            Ada.Text_IO.Put_Line("?");
+        else
+            Ada.Text_IO.Put_Line("Invalid Input");
+        end if;
+    end String_Process;
+
     Input : String(1..80);
     Last : Natural;
     Forever: Boolean := True;
-    Last_Index : Integer;
-    New_String : String(1..Input'Length);
     Spaces : Integer;
 begin
     while Forever loop
         Ada.Text_IO.Get_Line(Item => Input, Last => Last);
         Spaces := Count(Input => Input);
-        New_String := No_Space(Input => Input, White => Spaces);
-
-        Last_Index := Input'Length;
-        if Input(Last_Index - 1) = '.' then
-            -- Add structure to Graph
-            --Ada.Text_IO.Put_Line(Input(Last_Index));
-            Ada.Text_IO.Put_Line(".");
-        elsif Input(Last_Index - 1) = '?' then
-            -- Call function to check for link
-            -- Ada.Text_IO.Put_Line(Input(Last_Index));
-            Ada.Text_IO.Put_Line("?");
-        else
-            Ada.Text_IO.Put_Line("Invalid Input");
-        end if;
+        -- Call new procedure to process string
+        --New_String := No_Space(Input => Input, White => Spaces);
+        String_Process(No_Space(Input => Input, White => Spaces));
     end loop;
 end Hear;
 
 
-            
-        
