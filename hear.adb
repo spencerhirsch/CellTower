@@ -21,7 +21,11 @@ procedure Hear is
         end loop;
         return Number_Of_Space; -- Returns number of spaces
     end Count;
-
+    
+    -- ########################################################################
+    -- Function to return the index of the first . or ?
+    function Get_Index (Input : String) return Natural
+    
     -- ########################################################################
     -- Function to remove all spaces from a string
     function No_Space (Input : String ; White : Integer) return String is -- Returns a string
@@ -56,6 +60,8 @@ procedure Hear is
     procedure String_Process(New_String : String) is
     Last_Index : Integer := New_String'Length;
     begin
+        Ada.Text_IO.Put_Line(New_String); -- Prints New_String
+        Ada.Text_IO.Put_Line(New_String((1) .. (5))); -- Prints last 4 characters
         if New_String(Last_Index - 1) = '.' then
             -- Add structure to Graph
             --Ada.Text_IO.Put_Line(New_String(Last_Index));
@@ -77,10 +83,10 @@ procedure Hear is
     Spaces : Integer;
 begin
     while Forever loop
-        Ada.Text_IO.Get_Line(Item => Input, Last => Last);
-        Spaces := Count(Input => Input);
-        -- Call new procedure to process string
+        Ada.Text_IO.Get_Line(Item => Input, Last => Last); -- Get Input
+        Spaces := Count(Input => Input); -- Count the number of spaces (doesnt really matter)
+        String_Process(Input);
         --New_String := No_Space(Input => Input, White => Spaces);
-        String_Process(No_Space(Input => Input, White => Spaces));
+        --String_Process(No_Space(Input => Input, White => Spaces));
     end loop;
 end Hear;
