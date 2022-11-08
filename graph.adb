@@ -24,21 +24,42 @@ with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
 
 
 
-procedure Graph_Insertion(Initial : String; Connected : String; Determinant : String) is
+PROCEDURE GRAPH_INTERSECTION(INITIAL : STRING; CONNECTED : STRING; DETERMINANT : STRING) IS
     package Links is new Ada.Conatiners.Doubly_Linked_Lists(String);
     use Links;
     
-    type Towers is record
-        To : String;
-        Link : Links;
-    end record;
+    TYPE TOWERS IS RECORD
+        SOURCE : STRING;
+        LINK : LINKS;
+    END RECORD;
 
     package Tower_List is new Ada.Conatiners.Doubly_Linked_Lists(Towers);
     use Tower_List;
 
     Adj_List : List;
-    Tower : Tower;
-begin
+    TOWER : TOWER;
+
+    FUNCTION CONNECTION_EXISTS(INITIAL : STRING; CONNECTED ; STRING) IS
+        DOES_EXIST : BOOLEAN;
+    BEGIN
+        -- SEARCH THE STRUCTURE TO SEE IF THE CONNECTION EXISTS
+        RETURN DOES_EXIST;
+    END CONNECTION_EXISTS;
+
+    PROCEDURE OUTPUT(INITIAL : STRING; CONNECTED : STRING) IS
+        DOES_EXIST : BOOLEAN;
+    BEGIN
+        DOES_EXIST := CONNECTION_EXISTS(INITIAL, CONNECTED);
+        IF DOES_COMMENT_EXIST THEN
+            ADA.TEXT_IO.PUT_LINE("+ ");
+        ELSE
+            ADA.TEXT_IO.PUT_LINE("- ");
+        END IF;
+BEGIN
     
-end Graph_Insertion;
+END GRAPH_INTERSECTION;
+
+-- Need to create a function that determines if the values will be stored in the graph
+-- Need to create a function that determines if the input is a query of wether or not the
+-- the connection is valid.
     
