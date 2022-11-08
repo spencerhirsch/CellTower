@@ -3,9 +3,9 @@
 -- Course: CSE 4250, Fall 2022
 -- Project: Project 3, Can you hear me now?
 
-with Ada.Containers.Doubly_Linked_Lists;
-with Ada.Containers.Vectors;
-with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
+WITH ADA.CONTAINERS.DOUBLY_LINKED_LISTS;
+WITH ADA.CONTAINERS.VECTORS;
+WITH ADA.STRINGS.UNBOUNDED; USE ADA.STRINGS.UNBOUNDED;
 
 --generic
 --    type Node is range <>;
@@ -48,13 +48,16 @@ PROCEDURE GRAPH_INTERSECTION(INITIAL : STRING; CONNECTED : STRING; DETERMINANT :
 
     PROCEDURE OUTPUT(INITIAL : STRING; CONNECTED : STRING) IS
         DOES_EXIST : BOOLEAN;
+        OUTPUT_STRING : STRING := INITIAL & " " & CONNECTED;  
     BEGIN
         DOES_EXIST := CONNECTION_EXISTS(INITIAL, CONNECTED);
         IF DOES_COMMENT_EXIST THEN
-            ADA.TEXT_IO.PUT_LINE("+ ");
+            ADA.TEXT_IO.PUT_LINE("+ " & NATURAL'IMAGE(OUTPUT_STRING));
         ELSE
-            ADA.TEXT_IO.PUT_LINE("- ");
+            ADA.TEXT_IO.PUT_LINE("- " & NATURAL'IMAGE(OUTPUT_STRING));
         END IF;
+    END OUTPUT;
+    
 BEGIN
     
 END GRAPH_INTERSECTION;
