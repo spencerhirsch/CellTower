@@ -5,18 +5,16 @@ P SS ZX
 RN
 RV NO_IO
 RV NO_SECONDARY_STACK
-RV NO_STANDARD_STORAGE_POOLS
 RV NO_DYNAMIC_SIZED_OBJECTS
 RV SPARK_05
 
-U hear%b		hear.adb		3c4dcde3 NE OO SU IU KU
+U hear%b		hear.adb		360cdca3 NE OO SU IU KU
 W ada%s			ada.ads			ada.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 W ada.strings%s		a-string.ads		a-string.ali
 W ada.strings.fixed%s	a-strfix.adb		a-strfix.ali
-Z ada.tags%s		a-tags.adb		a-tags.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
-Z system.img_int%s	s-imgint.adb		s-imgint.ali
+Z system.concat_4%s	s-conca4.adb		s-conca4.ali
 Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 
 D ada.ads		20210408115628 76789da1 ada%s
@@ -33,14 +31,14 @@ D a-tags.ads		20210510020126 491b781d ada.tags%s
 D a-textio.ads		20210510020126 aef4d56d ada.text_io%s
 D a-tiinio.ads		20210510020126 390edddb ada.text_io.integer_io%s
 D a-unccon.ads		20210408115628 0e9b276f ada.unchecked_conversion%s
-D hear.adb		20221108021230 72884a9c hear%b
+D hear.adb		20221108180002 78c95bdc hear%b
 D interfac.ads		20210510020126 5ab55268 interfaces%s
 D i-cstrea.ads		20210510020126 e53d8b8e interfaces.c_streams%s
 D system.ads		20210510020128 32a08138 system%s
+D s-conca4.ads		20210510020126 7e642b20 system.concat_4%s
 D s-crtl.ads		20210510020126 0ebbdb71 system.crtl%s
 D s-exctab.ads		20210510020126 54135002 system.exception_table%s
 D s-ficobl.ads		20210510020126 078245e4 system.file_control_block%s
-D s-imgint.ads		20210510020128 02dbe0c2 system.img_int%s
 D s-parame.ads		20210510020128 48ec542b system.parameters%s
 D s-secsta.ads		20210510020128 20bbe636 system.secondary_stack%s
 D s-soflin.ads		20210510020128 a7318a92 system.soft_links%s
@@ -53,7 +51,7 @@ D s-wchcon.ads		20210510020128 1b7d22d2 system.wch_con%s
 G a e
 G c Z b b [hear standard 11 11 none]
 X 1 ada.ads
-16K9*Ada 20e8 15|6r6 7r6 8r6 9r6 56r9 67r9 72r25
+16K9*Ada 20e8 15|6r6 7r6 8r6 9r6 20r25 22r25 104r9
 X 5 a-inteio.ads
 18K13*Integer_Text_IO[13|46] 15|9w10
 X 8 a-string.ads
@@ -61,35 +59,50 @@ X 8 a-string.ads
 X 9 a-strfix.ads
 43K21*Fixed 596e22 15|8w18
 X 12 a-textio.ads
-57K13*Text_IO 727e16 15|6w10 56r13 67r13 72r29
-481U14*Get_Line 15|67s21
-482a7 Item{string} 15|67r30
-483i7 Last{natural} 15|67r45
-508U14*Put_Line 15|56s21 72s37
+57K13*Text_IO 727e16 15|6w10 20r29 22r29 104r13
+481U14*Get_Line 15|104s21
+482a7 Item{string} 15|104r30
+483i7 Last{natural} 15|104r45
+508U14*Put_Line 15|20s37 22s37
 X 15 hear.adb
-11U11*HEAR 11b11 78l5 78t9
-12V14 DOES_COMMENT_EXIST{boolean} 12b14 12>34 20l13 20t31 69s20
-12a34 INPUT{string} 14r26 15r28
-14i21 I{integer} 15r34
-22V18 GET_COMMENT_LENGTH{integer} 22b18 22>39 35l13 35t31 68s35 73s57
-22a39 INPUT{string} 26r26 27r28
-23i9 COMMENT_LENGTH{natural} 31m33 31r51 34r24
-24b9 BEFORE_POUND{boolean} 28m33 30r28
-26i21 I{integer} 27r34
-37V18 GET_COMMAND_LENGTH{integer} 37b18 37>39 37>55 40l13 40t31 70s43
-37a39 INPUT{string} 39r24
-37i55 COMMENT_LENGTH{natural} 39r39
-44V14 REMOVE_COMMENTS{string} 44b14 44>31 44>47 50l9 50t24 73s34
-44a31 INPUT{string} 45r45 48r31 48r37
-44i47 COMMENT_LENGTH{natural} 45r60
-45i17 COMMAND_LENGTH{natural} 46r32 48r50
-46a9 NEW_STRING{string} 48m17 49r16
-54U15 PROCESS_STRING 54b15 54>30 57l9 57t23 76s9
-54a30 NEW_STRING{string} 56r30
-59i1 LAST{natural} 67m53
-60b1 FOREVER{boolean} 66r11
-61i1 ARRAY_SIZE{integer} 64r19 71m25
-62i1 COMMAND_LENGTH{natural} 70m25 71r39
-63i1 COMMENT_LENGTH{natural} 68m17 70r69
-64a1 INPUT{string} 67m38 68r54 69r39 70r62 72r60 73m25 73r50 73r76 76r24
+11U11*HEAR 11b11 124l5 124t9
+12I9 POSITION{integer} 29r65 42r63 59r70 76r61 82r64 82r86 94r22 95r22 96r22
+. 97r22 98r22
+17U15 PROCESS_STRING 17b15 17>31 17>58 17>86 24l9 24t23 119s25
+17a31 TOWER_FIRST_NAME{string} 20r59 22r59
+17a58 TOWER_SECOND_NAME{string} 20r87 22r87
+17e86 COMMAND{character} 19r20 21r23
+29V18 GET_TOWER_START{integer} 29b18 29>35 29>51 37l13 37t28 106s38 108s39
+29a35 INPUT{string} 32r28
+29i51 START_INDEX{12I9} 31r26
+31i21 I{integer} 32r34 33r40
+42V18 GET_TOWER_END{integer} 42b18 42>33 42>49 54l13 54t26 107s36 109s37
+42a33 INPUT{string} 45r28 47r31 49r31
+42i49 START_INDEX{12I9} 44r26
+44i21 I{integer} 45r34 46r41 47r37 48r41 49r37 50r41
+59V18 GET_COMMAND_POSITION{integer} 59b18 59>40 59>56 59>80 71l13 71t33 110s34
+59a40 INPUT{string} 62r28 64r31 66r31
+59i56 START_INDEX{12I9} 61r26
+59i80 END_INDEX{integer} 61r39
+61i21 I{integer} 62r34 63r41 64r37 65r41 66r37
+76V18 GET_CHAR_AT_INDEX{character} 76b18 76>37 76>53 79l13 79t30 113s36
+76a37 INPUT{string} 78r24
+76i53 INDEX{12I9} 78r30
+82V18 GET_TOWER_NAME{string} 82b18 82>34 82>50 82>74 87l13 87t27 119s40 120s52
+82a34 INPUT{string} 85r31
+82i50 START_INDEX{12I9} 83r45 85r37
+82i74 END_INDEX{12I9} 83r33 85r50
+83a9 TOWER_NAME{string} 85m17 86r24
+89b1 IS_VALID_INPUT{boolean} 103m17 115m25 118r20
+90i1 LAST{natural} 104m53
+91b1 FOREVER{boolean} 102r11
+92i1 ARRAY_SIZE{integer} 93r32
+93a1 INPUT{string} 104m38 106r54 107r50 108r55 109r51 110r55 113r54 119r55
+. 120r67
+94i1 TOWER_FIRST_START{12I9} 106m17 107r57 119r61
+95i1 TOWER_FIRST_END{12I9} 107m17 108r62 119r79
+96i1 TOWER_SECOND_START{12I9} 108m17 109r58 120r73
+97i1 TOWER_SECOND_END{12I9} 109m17 110r62 120r92
+98i1 COMMAND_INDEX{12I9} 110m17 112r20 113r61
+100e1 COMMAND{character} 113m25 121r52
 
