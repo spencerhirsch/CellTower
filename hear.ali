@@ -8,13 +8,13 @@ RV NO_SECONDARY_STACK
 RV NO_DYNAMIC_SIZED_OBJECTS
 RV SPARK_05
 
-U hear%b		hear.adb		4c478d66 NE OO SU IU KU
+U hear%b		hear.adb		b49e568f NE OO SU IU KU
 W ada%s			ada.ads			ada.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 W ada.strings%s		a-string.ads		a-string.ali
 W ada.strings.fixed%s	a-strfix.adb		a-strfix.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
-W graph%s		graph.ads		graph.ali
+W graph%s		graph.adb		graph.ali
 Z system.concat_4%s	s-conca4.adb		s-conca4.ali
 Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 
@@ -39,8 +39,8 @@ D a-tags.ads		20210510020126 491b781d ada.tags%s
 D a-textio.ads		20210510020126 aef4d56d ada.text_io%s
 D a-tiinio.ads		20210510020126 390edddb ada.text_io.integer_io%s
 D a-unccon.ads		20210408115628 0e9b276f ada.unchecked_conversion%s
-D graph.ads		20221109011442 5dd00a0f graph%s
-D hear.adb		20221108224924 5f520016 hear%b
+D graph.ads		20221109014032 c639ee94 graph%s
+D hear.adb		20221109013852 3c623f64 hear%b
 D interfac.ads		20210510020126 5ab55268 interfaces%s
 D i-cstrea.ads		20210510020126 e53d8b8e interfaces.c_streams%s
 D system.ads		20210510020128 32a08138 system%s
@@ -52,6 +52,7 @@ D s-ficobl.ads		20210510020126 078245e4 system.file_control_block%s
 D s-finmas.ads		20210510020126 7811a767 system.finalization_masters%s
 D s-finroo.ads		20210510020126 4ff27390 system.finalization_root%s
 D s-parame.ads		20210510020128 48ec542b system.parameters%s
+D s-pooglo.ads		20210510020128 ede33ef8 system.pool_global%s
 D s-secsta.ads		20210510020128 20bbe636 system.secondary_stack%s
 D s-soflin.ads		20210510020128 a7318a92 system.soft_links%s
 D s-stache.ads		20210510020128 a37c21ec system.stack_checking%s
@@ -65,8 +66,9 @@ D s-unstyp.ads		20210510020128 34867c83 system.unsigned_types%s
 D s-wchcon.ads		20210510020128 1b7d22d2 system.wch_con%s
 G a e
 G c Z b b [hear standard 12 11 none]
+G r c none [hear standard 12 11 none] [add_node graph 12 19 none]
 X 1 ada.ads
-16K9*Ada 20e8 23|6r6 7r6 8r6 9r6 21r25 23r25 105r9
+16K9*Ada 20e8 23|6r6 7r6 8r6 9r6 22r25 25r25 108r9
 X 10 a-inteio.ads
 18K13*Integer_Text_IO[20|46] 23|9w10
 X 12 a-iteint.ads
@@ -77,52 +79,53 @@ X 14 a-string.ads
 X 15 a-strfix.ads
 43K21*Fixed 596e22 23|8w18
 X 19 a-textio.ads
-57K13*Text_IO 727e16 23|6w10 21r29 23r29 105r13
-481U14*Get_Line 23|105s21
-482a7 Item{string} 23|105r30
-483i7 Last{natural} 23|105r45
-508U14*Put_Line 23|21s37 23s37
+57K13*Text_IO 727e16 23|6w10 22r29 25r29 108r13
+481U14*Get_Line 23|108s21
+482a7 Item{string} 23|108r30
+483i7 Last{natural} 23|108r45
+508U14*Put_Line 23|22s37 25s37
 X 22 graph.ads
-14k9*GRAPH 23e10 23|10w6
+10K9*GRAPH 22e10 23|10w6 13r5 23r25 26r25
+12U19*ADD_NODE 23|23s31 26s31
 X 23 hear.adb
-12U11*HEAR 12b11 125l5 125t9
-13I9 POSITION{integer} 30r65 43r63 60r70 77r61 83r64 83r86 95r22 96r22 97r22
-. 98r22 99r22
-18U15 PROCESS_STRING 18b15 18>31 18>58 18>86 25l9 25t23 120s25
-18a31 TOWER_FIRST_NAME{string} 21r59 23r59
-18a58 TOWER_SECOND_NAME{string} 21r87 23r87
-18e86 COMMAND{character} 20r20 22r23
-30V18 GET_TOWER_START{integer} 30b18 30>35 30>51 38l13 38t28 107s38 109s39
-30a35 INPUT{string} 33r28
-30i51 START_INDEX{13I9} 32r26
-32i21 I{integer} 33r34 34r40
-43V18 GET_TOWER_END{integer} 43b18 43>33 43>49 55l13 55t26 108s36 110s37
-43a33 INPUT{string} 46r28 48r31 50r31
-43i49 START_INDEX{13I9} 45r26
-45i21 I{integer} 46r34 47r41 48r37 49r41 50r37 51r41
-60V18 GET_COMMAND_POSITION{integer} 60b18 60>40 60>56 60>80 72l13 72t33 111s34
-60a40 INPUT{string} 63r28 65r31 67r31
-60i56 START_INDEX{13I9} 62r26
-60i80 END_INDEX{integer} 62r39
-62i21 I{integer} 63r34 64r41 65r37 66r41 67r37
-77V18 GET_CHAR_AT_INDEX{character} 77b18 77>37 77>53 80l13 80t30 114s36
-77a37 INPUT{string} 79r24
-77i53 INDEX{13I9} 79r30
-83V18 GET_TOWER_NAME{string} 83b18 83>34 83>50 83>74 88l13 88t27 120s40 121s52
-83a34 INPUT{string} 86r31
-83i50 START_INDEX{13I9} 84r45 86r37
-83i74 END_INDEX{13I9} 84r33 86r50
-84a9 TOWER_NAME{string} 86m17 87r24
-90b1 IS_VALID_INPUT{boolean} 104m17 116m25 119r20
-91i1 LAST{natural} 105m53
-92b1 FOREVER{boolean} 103r11
-93i1 ARRAY_SIZE{integer} 94r32
-94a1 INPUT{string} 105m38 107r54 108r50 109r55 110r51 111r55 114r54 120r55
-. 121r67
-95i1 TOWER_FIRST_START{13I9} 107m17 108r57 120r61
-96i1 TOWER_FIRST_END{13I9} 108m17 109r62 120r79
-97i1 TOWER_SECOND_START{13I9} 109m17 110r58 121r73
-98i1 TOWER_SECOND_END{13I9} 110m17 111r62 121r92
-99i1 COMMAND_INDEX{13I9} 111m17 113r20 114r61
-101e1 COMMAND{character} 114m25 122r52
+12U11*HEAR 12b11 128l5 128t9
+14I9 POSITION{integer} 33r65 46r63 63r70 80r61 86r64 86r86 98r22 99r22 100r22
+. 101r22 102r22
+19U15 PROCESS_STRING 19b15 19>31 19>58 19>86 28l9 28t23 123s25
+19a31 TOWER_FIRST_NAME{string} 22r59 23r40 25r59 26r40
+19a58 TOWER_SECOND_NAME{string} 22r87 23r58 25r87 26r58
+19e86 COMMAND{character} 21r20 24r23
+33V18 GET_TOWER_START{integer} 33b18 33>35 33>51 41l13 41t28 110s38 112s39
+33a35 INPUT{string} 36r28
+33i51 START_INDEX{14I9} 35r26
+35i21 I{integer} 36r34 37r40
+46V18 GET_TOWER_END{integer} 46b18 46>33 46>49 58l13 58t26 111s36 113s37
+46a33 INPUT{string} 49r28 51r31 53r31
+46i49 START_INDEX{14I9} 48r26
+48i21 I{integer} 49r34 50r41 51r37 52r41 53r37 54r41
+63V18 GET_COMMAND_POSITION{integer} 63b18 63>40 63>56 63>80 75l13 75t33 114s34
+63a40 INPUT{string} 66r28 68r31 70r31
+63i56 START_INDEX{14I9} 65r26
+63i80 END_INDEX{integer} 65r39
+65i21 I{integer} 66r34 67r41 68r37 69r41 70r37
+80V18 GET_CHAR_AT_INDEX{character} 80b18 80>37 80>53 83l13 83t30 117s36
+80a37 INPUT{string} 82r24
+80i53 INDEX{14I9} 82r30
+86V18 GET_TOWER_NAME{string} 86b18 86>34 86>50 86>74 91l13 91t27 123s40 124s52
+86a34 INPUT{string} 89r31
+86i50 START_INDEX{14I9} 87r45 89r37
+86i74 END_INDEX{14I9} 87r33 89r50
+87a9 TOWER_NAME{string} 89m17 90r24
+93b1 IS_VALID_INPUT{boolean} 107m17 119m25 122r20
+94i1 LAST{natural} 108m53
+95b1 FOREVER{boolean} 106r11
+96i1 ARRAY_SIZE{integer} 97r32
+97a1 INPUT{string} 108m38 110r54 111r50 112r55 113r51 114r55 117r54 123r55
+. 124r67
+98i1 TOWER_FIRST_START{14I9} 110m17 111r57 123r61
+99i1 TOWER_FIRST_END{14I9} 111m17 112r62 123r79
+100i1 TOWER_SECOND_START{14I9} 112m17 113r58 124r73
+101i1 TOWER_SECOND_END{14I9} 113m17 114r62 124r92
+102i1 COMMAND_INDEX{14I9} 114m17 116r20 117r61
+104e1 COMMAND{character} 117m25 125r52
 
