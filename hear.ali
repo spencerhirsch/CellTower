@@ -1,0 +1,131 @@
+V "GNAT Lib v10"
+M P W=b
+P SS ZX
+
+RN
+RV NO_IO
+RV NO_SECONDARY_STACK
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV SPARK_05
+
+U hear%b		hear.adb		b49e568f NE OO SU IU KU
+W ada%s			ada.ads			ada.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.strings%s		a-string.ads		a-string.ali
+W ada.strings.fixed%s	a-strfix.adb		a-strfix.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W graph%s		graph.adb		graph.ali
+Z system.concat_4%s	s-conca4.adb		s-conca4.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+
+D ada.ads		20210408115628 76789da1 ada%s
+D a-charac.ads		20210408115628 2d3ec45b ada.characters%s
+D a-chlat1.ads		20210408115628 66457d31 ada.characters.latin_1%s
+D a-contai.ads		20210408115628 61e5e089 ada.containers%s
+D a-cdlili.ads		20210510020126 8e06b4f2 ada.containers.doubly_linked_lists%s
+D a-conhel.ads		20210510020126 20298884 ada.containers.helpers%s
+D a-convec.ads		20210510020126 7e2b0fdf ada.containers.vectors%s
+D a-except.ads		20210510020126 a7106115 ada.exceptions%s
+D a-finali.ads		20210510020126 bf4f806b ada.finalization%s
+D a-inteio.ads		20210408115628 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20210408115628 e4a01f64 ada.io_exceptions%s
+D a-iteint.ads		20210408115628 7c7305e9 ada.iterator_interfaces%s
+D a-stream.ads		20210510020126 119b8fb3 ada.streams%s
+D a-string.ads		20210408115628 90ac6797 ada.strings%s
+D a-strfix.ads		20210510020126 86d6bc21 ada.strings.fixed%s
+D a-strmap.ads		20210510020126 e8bb714a ada.strings.maps%s
+D a-strunb.ads		20210510020126 1656705b ada.strings.unbounded%s
+D a-tags.ads		20210510020126 491b781d ada.tags%s
+D a-textio.ads		20210510020126 aef4d56d ada.text_io%s
+D a-tiinio.ads		20210510020126 390edddb ada.text_io.integer_io%s
+D a-unccon.ads		20210408115628 0e9b276f ada.unchecked_conversion%s
+D graph.ads		20221109014032 c639ee94 graph%s
+D hear.adb		20221109153804 3c623f64 hear%b
+D interfac.ads		20210510020126 5ab55268 interfaces%s
+D i-cstrea.ads		20210510020126 e53d8b8e interfaces.c_streams%s
+D system.ads		20210510020128 32a08138 system%s
+D s-atocou.ads		20210510020126 b45c2d8d system.atomic_counters%s
+D s-conca4.ads		20210510020126 7e642b20 system.concat_4%s
+D s-crtl.ads		20210510020126 0ebbdb71 system.crtl%s
+D s-exctab.ads		20210510020126 54135002 system.exception_table%s
+D s-ficobl.ads		20210510020126 078245e4 system.file_control_block%s
+D s-finmas.ads		20210510020126 7811a767 system.finalization_masters%s
+D s-finroo.ads		20210510020126 4ff27390 system.finalization_root%s
+D s-parame.ads		20210510020128 48ec542b system.parameters%s
+D s-pooglo.ads		20210510020128 ede33ef8 system.pool_global%s
+D s-secsta.ads		20210510020128 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20210510020128 a7318a92 system.soft_links%s
+D s-stache.ads		20210510020128 a37c21ec system.stack_checking%s
+D s-stalib.ads		20210510020128 09bd3940 system.standard_library%s
+D s-stoele.ads		20210510020128 2dc34a04 system.storage_elements%s
+D s-stopoo.ads		20210510020128 b16154c2 system.storage_pools%s
+D s-stposu.ads		20210510020128 97a6219c system.storage_pools.subpools%s
+D s-stratt.ads		20210510020128 aedef97e system.stream_attributes%s
+D s-traent.ads		20210510020128 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20210510020128 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20210510020128 1b7d22d2 system.wch_con%s
+G a e
+G c Z b b [hear standard 12 11 none]
+G r c none [hear standard 12 11 none] [add_node graph 12 19 none]
+X 1 ada.ads
+16K9*Ada 20e8 23|6r6 7r6 8r6 9r6 22r25 25r25 108r9
+X 10 a-inteio.ads
+18K13*Integer_Text_IO[20|46] 23|9w10
+X 12 a-iteint.ads
+24h9 Forward_Iterator
+32h9 Reversible_Iterator<24R9[5|69]>
+X 14 a-string.ads
+16K13*Strings 35e16 23|7w10 8r10
+X 15 a-strfix.ads
+43K21*Fixed 596e22 23|8w18
+X 19 a-textio.ads
+57K13*Text_IO 727e16 23|6w10 22r29 25r29 108r13
+481U14*Get_Line 23|108s21
+482a7 Item{string} 23|108r30
+483i7 Last{natural} 23|108r45
+508U14*Put_Line 23|22s37 25s37
+X 22 graph.ads
+10K9*GRAPH 22e10 23|10w6 13r5 23r25 26r25
+12U19*ADD_NODE 23|23s31 26s31
+X 23 hear.adb
+12U11*HEAR 12b11 128l5 128t9
+14I9 POSITION{integer} 33r65 46r63 63r70 80r61 86r64 86r86 98r22 99r22 100r22
+. 101r22 102r22
+19U15 PROCESS_STRING 19b15 19>31 19>58 19>86 28l9 28t23 123s25
+19a31 TOWER_FIRST_NAME{string} 22r59 23r40 25r59 26r40
+19a58 TOWER_SECOND_NAME{string} 22r87 23r58 25r87 26r58
+19e86 COMMAND{character} 21r20 24r23
+33V18 GET_TOWER_START{integer} 33b18 33>35 33>51 41l13 41t28 110s38 112s39
+33a35 INPUT{string} 36r28
+33i51 START_INDEX{14I9} 35r26
+35i21 I{integer} 36r34 37r40
+46V18 GET_TOWER_END{integer} 46b18 46>33 46>49 58l13 58t26 111s36 113s37
+46a33 INPUT{string} 49r28 51r31 53r31
+46i49 START_INDEX{14I9} 48r26
+48i21 I{integer} 49r34 50r41 51r37 52r41 53r37 54r41
+63V18 GET_COMMAND_POSITION{integer} 63b18 63>40 63>56 63>80 75l13 75t33 114s34
+63a40 INPUT{string} 66r28 68r31 70r31
+63i56 START_INDEX{14I9} 65r26
+63i80 END_INDEX{integer} 65r39
+65i21 I{integer} 66r34 67r41 68r37 69r41 70r37
+80V18 GET_CHAR_AT_INDEX{character} 80b18 80>37 80>53 83l13 83t30 117s36
+80a37 INPUT{string} 82r24
+80i53 INDEX{14I9} 82r30
+86V18 GET_TOWER_NAME{string} 86b18 86>34 86>50 86>74 91l13 91t27 123s40 124s52
+86a34 INPUT{string} 89r31
+86i50 START_INDEX{14I9} 87r45 89r37
+86i74 END_INDEX{14I9} 87r33 89r50
+87a9 TOWER_NAME{string} 89m17 90r24
+93b1 IS_VALID_INPUT{boolean} 107m17 119m25 122r20
+94i1 LAST{natural} 108m53
+95b1 FOREVER{boolean} 106r11
+96i1 ARRAY_SIZE{integer} 97r32
+97a1 INPUT{string} 108m38 110r54 111r50 112r55 113r51 114r55 117r54 123r55
+. 124r67
+98i1 TOWER_FIRST_START{14I9} 110m17 111r57 123r61
+99i1 TOWER_FIRST_END{14I9} 111m17 112r62 123r79
+100i1 TOWER_SECOND_START{14I9} 112m17 113r58 124r73
+101i1 TOWER_SECOND_END{14I9} 113m17 114r62 124r92
+102i1 COMMAND_INDEX{14I9} 114m17 116r20 117r61
+104e1 COMMAND{character} 117m25 125r52
+
