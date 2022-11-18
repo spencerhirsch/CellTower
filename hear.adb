@@ -139,13 +139,13 @@ BEGIN
 	-- Iterate forever, in order to allow inputs indefinitely.
     WHILE FOREVER LOOP
 		-- Reset the checked values each iteration.
-		FOR NODE OF GRAPH.SOURCES LOOP
-			NODE.CHECKED := FALSE;
-		END LOOP;
+		GRAPH.RESET_CHECKED_SOURCES;
+		
 		-- Reset the print variable each iteration.
 		GRAPH.ALREADY_PRINTED_DFS := FALSE;
 		-- Reset the valid input variable each iteration
 		IS_VALID_INPUT := TRUE;
+		
 		
 		-- Get input each line
         ADA.TEXT_IO.GET_LINE(ITEM => INPUT, LAST => LAST);
