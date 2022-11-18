@@ -156,15 +156,18 @@ BEGIN
 		TOWER_SECOND_START := GET_TOWER_START(INPUT, TOWER_FIRST_END + 1);
 		TOWER_SECOND_END := GET_TOWER_END(INPUT, TOWER_SECOND_START);
 		
-		-- Get the command index
+		-- Get the index of the command, '?' or '.'.
 		COMMAND_INDEX := GET_COMMAND_POSITION(INPUT, TOWER_SECOND_END + 1, 150);
 		
+		-- As long as there is a command, then which command it is.
 		IF COMMAND_INDEX /= 0 THEN
 			COMMAND := GET_CHAR_AT_INDEX(INPUT, COMMAND_INDEX);
+		-- Otherwise, if there is no command, the input is invalid.
 		ELSE
 			IS_VALID_INPUT := FALSE;
 		END IF;
 		
+		-- As long as the input is valid, process the string.
 		IF IS_VALID_INPUT THEN
 			PROCESS_STRING(GET_TOWER_NAME(INPUT,TOWER_FIRST_START,TOWER_FIRST_END),
 						   GET_TOWER_NAME(INPUT,TOWER_SECOND_START,TOWER_SECOND_END),
