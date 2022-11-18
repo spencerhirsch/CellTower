@@ -1,0 +1,200 @@
+V "GNAT Lib v10"
+M P W=b
+P SS ZX
+
+RN
+RV NO_ALLOCATORS
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_DISPATCHING_CALLS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_LOCAL_ALLOCATORS
+RV NO_NESTED_FINALIZATION
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_ALLOCATORS_AFTER_ELABORATION
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV SPARK_05
+
+U hear%b		hear.adb		f4ae6ae4 NE OO SU IU KU
+W ada%s			ada.ads			ada.ali
+W ada.containers%s	a-contai.ads		a-contai.ali
+W ada.containers.doubly_linked_lists%s
+Z ada.exceptions%s	a-except.adb		a-except.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.strings%s		a-string.ads		a-string.ali
+W ada.strings.fixed%s	a-strfix.adb		a-strfix.ali
+W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W ada.text_io.unbounded_io%s  a-tiunio.ads	a-tiunio.ali
+W graph%s		graph.adb		graph.ali
+Z system%s		system.ads		system.ali
+Z system.concat_4%s	s-conca4.adb		s-conca4.ali
+Z system.pool_global%s	s-pooglo.adb		s-pooglo.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.soft_links%s	s-soflin.adb		s-soflin.ali
+Z system.standard_library%s  s-stalib.adb	s-stalib.ali
+Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
+Z system.storage_pools%s  s-stopoo.adb		s-stopoo.ali
+Z system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
+
+D ada.ads		20220628085427 76789da1 ada%s
+D a-charac.ads		20220628085427 2d3ec45b ada.characters%s
+D a-chlat1.ads		20220628085427 66457d31 ada.characters.latin_1%s
+D a-contai.ads		20220628085427 61e5e089 ada.containers%s
+D a-cdlili.ads		20220628085427 8e06b4f2 ada.containers.doubly_linked_lists%s
+D a-cdlili.adb		20220628085427 cb6e209e ada.containers.doubly_linked_lists%b
+D a-conhel.ads		20220628085427 20298884 ada.containers.helpers%s
+D a-except.ads		20220628085427 a7106115 ada.exceptions%s
+D a-finali.ads		20220628085427 bf4f806b ada.finalization%s
+D a-inteio.ads		20220628085427 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20220628085427 e4a01f64 ada.io_exceptions%s
+D a-iteint.ads		20220628085427 7c7305e9 ada.iterator_interfaces%s
+D a-stream.ads		20220628085427 119b8fb3 ada.streams%s
+D a-string.ads		20220628085427 90ac6797 ada.strings%s
+D a-strfix.ads		20220628085427 86d6bc21 ada.strings.fixed%s
+D a-strmap.ads		20220628085427 e8bb714a ada.strings.maps%s
+D a-strunb.ads		20220628085427 1656705b ada.strings.unbounded%s
+D a-suteio.ads		20220628085427 26d8e9aa ada.strings.unbounded.text_io%s
+D a-tags.ads		20220628085427 491b781d ada.tags%s
+D a-textio.ads		20220628085427 aef4d56d ada.text_io%s
+D a-tiinio.ads		20220628085427 390edddb ada.text_io.integer_io%s
+D a-tiunio.ads		20220628085427 759c6b0c ada.text_io.unbounded_io%s
+D a-unccon.ads		20220628085427 0e9b276f ada.unchecked_conversion%s
+D a-uncdea.ads		20220628085427 eff36322 ada.unchecked_deallocation%s
+D graph.ads		20221117234833 f95ea79d graph%s
+D hear.adb		20221118000232 aef9e5a3 hear%b
+D interfac.ads		20220628085427 5ab55268 interfaces%s
+D i-cstrea.ads		20220628085427 e53d8b8e interfaces.c_streams%s
+D system.ads		20220628085427 77e65b42 system%s
+D s-atocou.ads		20220628085427 b45c2d8d system.atomic_counters%s
+D s-conca4.ads		20220628085427 7e642b20 system.concat_4%s
+D s-crtl.ads		20220628085427 0ebbdb71 system.crtl%s
+D s-exctab.ads		20220628085427 54135002 system.exception_table%s
+D s-ficobl.ads		20220628085427 078245e4 system.file_control_block%s
+D s-finmas.ads		20220628085427 7811a767 system.finalization_masters%s
+D s-finroo.ads		20220628085427 4ff27390 system.finalization_root%s
+D s-memory.ads		20220628085427 597d6634 system.memory%s
+D s-parame.ads		20220628085427 48ec542b system.parameters%s
+D s-pooglo.ads		20220628085427 ede33ef8 system.pool_global%s
+D s-secsta.ads		20220628085427 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20220628085427 a7318a92 system.soft_links%s
+D s-stache.ads		20220628085427 a37c21ec system.stack_checking%s
+D s-stalib.ads		20220628085427 09bd3940 system.standard_library%s
+D s-stalib.adb		20220628085427 f2fe2716 system.standard_library%b
+D s-stoele.ads		20220628085427 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20220628085427 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20220628085427 b16154c2 system.storage_pools%s
+D s-stposu.ads		20220628085427 97a6219c system.storage_pools.subpools%s
+D s-stratt.ads		20220628085427 aedef97e system.stream_attributes%s
+D s-traent.ads		20220628085427 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20220628085427 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20220628085427 1b7d22d2 system.wch_con%s
+G a e
+G c Z b b [hear standard 19 11 none]
+G r s towers [hear standard 19 11 none] [towersIP graph 29 14 none]
+G r l towers [hear standard 19 11 none] [towersDI graph 29 14 none]
+G r c none [hear standard 19 11 none] [exists_in_source graph 40 18 none]
+G r c none [hear standard 19 11 none] [dfs graph 46 19 none]
+G r c none [hear standard 19 11 none] [get_from_source graph 43 18 none]
+X 1 ada.ads
+16K9*Ada 20e8 26|6r6 7r6 8r6 9r6 10r6 11r6 12r6 13r5 67r33 71r33 151r9
+X 4 a-contai.ads
+16K13*Containers 28e19 26|11r10
+X 5 a-cdlili.ads
+46k24*Doubly_Linked_Lists 406e39 26|11w21
+51R9*List<9|43R9>
+148U14*Append 26|50s51[25|24] 56s51[25|24] 57s47[25|24]
+X 10 a-inteio.ads
+18K13*Integer_Text_IO[21|46] 26|10w10
+X 12 a-iteint.ads
+24h9 Forward_Iterator
+32h9 Reversible_Iterator<24R9[5|69]>
+X 14 a-string.ads
+16K13*Strings 35e16 26|8w10 9r10 12r10 13r9
+X 15 a-strfix.ads
+43K21*Fixed 596e22 26|9w18
+X 17 a-strunb.ads
+82K21*Unbounded 756e26 26|12w18 13r17
+103V13*To_Unbounded_String{87R9} 26|48s59 54s56 55s59
+X 20 a-textio.ads
+57K13*Text_IO 727e16 26|6w10 7r10 67r37 71r37 151r13
+481U14*Get_Line 26|151s21
+482a7 Item{string} 26|151r30
+483i7 Last{natural} 26|151r45
+508U14*Put_Line 26|67s45 71s45
+X 22 a-tiunio.ads
+25K21*Unbounded_IO 61e29 26|7w18
+X 25 graph.ads
+18K9*GRAPH 54e10 26|14w6 37r30 37r57 38r30 38r57 44r47 49r49 57r33 64r47
+. 75r33 142r29 146r17
+19b9*ALREADY_PRINTED_DFS{boolean} 26|146m23
+20R14*TOWERS 33e19 26|37r63 38r63
+21P14*TOWERS_ACCESS(20R14) 26|37r36 38r36
+30r5*SOURCE{17|87R9} 26|48m49 54m46 55m49
+31r5*LINK{5|51R9[24]} 26|50m46 56m46
+32b5*CHECKED{boolean} 26|143m30
+36r9*SOURCES{5|51R9[24]} 26|57m39 57r39 142r35
+40V18*EXISTS_IN_SOURCE{boolean} 26|44s53 64s53
+43V18*GET_FROM_SOURCE{21P14} 26|49s55
+46U19*DFS 26|75s39
+X 26 hear.adb
+19U11*HEAR 19b11 177l5 177t9
+20I9 POSITION{integer} 25r22 26r22 27r22 28r22 29r22 81r65 92r63 108r70 124r61
+. 130r64 130r86
+21b1 IS_VALID_INPUT{boolean} 148m17 167m25 171r20
+22i1 LAST{natural} 151m53
+23b1 FOREVER{boolean} 140r11
+24a1 INPUT{string} 151m38 154r54 155r50 156r55 157r51 160r55 164r54 172r55
+. 173r67
+25i1 TOWER_FIRST_START{20I9} 154m17 155r57 172r61
+26i1 TOWER_FIRST_END{20I9} 155m17 156r62 172r79
+27i1 TOWER_SECOND_START{20I9} 156m17 157r58 173r73
+28i1 TOWER_SECOND_END{20I9} 157m17 160r62 173r92
+29i1 COMMAND_INDEX{20I9} 160m17 163r20 164r61
+30e1 COMMAND{character} 164m25 174r52
+35U15 PROCESS_STRING 35b15 35>30 35>57 35>85 78l9 78t23 172s25
+35a30 TOWER_FIRST_NAME{string} 44r70 49r71 54r76 64r70 67r61 70r54 71r61
+. 75r43 75r80
+35a57 TOWER_SECOND_NAME{string} 48r79 55r79 67r89 70r73 71r89 75r61
+35e85 COMMAND{character} 43r20 63r23
+36b9 LINK_FOUND{boolean}
+37p9 TOWER_SOURCE{25|21P14} 49m33 50r33 54r33 56r33 57r54
+38p9 TOWER_CONNECTED{25|21P14} 48r33 50r58 55r33 56r58
+39b9 FIRST_TOWER_EXISTS{boolean} 44m25 47r28 64m25 66r32 70r31 74r31
+81V18 GET_TOWER_START{integer} 81b18 81>35 81>51 89l13 89t28 154s38 156s39
+81a35 INPUT{string} 84r28
+81i51 START_INDEX{20I9} 83r26
+83i21 I{integer} 84r34 85r40
+92V18 GET_TOWER_END{integer} 92b18 92>33 92>49 104l13 104t26 155s36 157s37
+92a33 INPUT{string} 95r28 97r31 99r31
+92i49 START_INDEX{20I9} 94r26
+94i21 I{integer} 95r34 96r41 97r37 98r41 99r37 100r41
+108V18 GET_COMMAND_POSITION{integer} 108b18 108>40 108>56 108>80 120l13 120t33
+. 160s34
+108a40 INPUT{string} 111r28 113r31 115r31
+108i56 START_INDEX{20I9} 110r26
+108i80 END_INDEX{integer} 110r39
+110i21 I{integer} 111r34 112r41 113r37 114r41 115r37
+124V18 GET_CHAR_AT_INDEX{character} 124b18 124>37 124>53 127l13 127t30 164s36
+124a37 INPUT{string} 126r24
+124i53 INDEX{20I9} 126r30
+130V18 GET_TOWER_NAME{string} 130b18 130>34 130>50 130>74 135l13 135t27 172s40
+. 173s52
+130a34 INPUT{string} 133r31
+130i50 START_INDEX{20I9} 131r45 133r37
+130i74 END_INDEX{20I9} 131r33 133r50
+131a9 TOWER_NAME{string} 133m17 134r24
+142p21 NODE{25|21P14} 143r25
+X 29 system.ads
+67M9*Address
+X 37 s-memory.ads
+53V13*Alloc{29|67M9} 103i<c,__gnat_malloc>22
+68U14*Free 104i<c,__gnat_free>22
+76V13*Realloc{29|67M9} 105i<c,__gnat_realloc>22
+X 44 s-stalib.adb
+93U14 Break_Start 94i<c,__gnat_break_start>22
+
